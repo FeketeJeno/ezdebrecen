@@ -73,6 +73,10 @@ tbody{
     width: 200px;
 }
 
+#kozkep{
+    height: 200px;
+}
+
 small {
     white-space: pre;
 }
