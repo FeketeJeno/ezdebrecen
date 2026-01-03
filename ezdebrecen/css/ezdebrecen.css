@@ -69,10 +69,8 @@ tbody{
     margin-top: 20px;
 }
 
-.madarkep{
-    width: 100px;
-    vertical-align: bottom;
-    /*cursor: pointer;*/
+#altkep{
+    width: 200px;
 }
 
 small {
@@ -90,7 +88,7 @@ small {
     text-align:center;
 }
 
-.novenykep img{
+.mkep img{
     width: 100%;
     max-width: 500px;
     padding: 20px;
