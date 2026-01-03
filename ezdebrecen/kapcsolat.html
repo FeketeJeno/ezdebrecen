@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ez Debrecen</title>
+  <title>Ez Debrecen-Kapcsolatfelvétel</title>
   <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="css/ezdebrecen.css">
   <script src="bootstrap/jquery.min.js"></script>
@@ -42,3 +42,102 @@
   </div>
   <h1 class="d-none d-md-block">Ez Debrecen</h1>
 </div>
+
+ <style>
+        .container {
+            width: 350px;
+            margin: 50px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+                label {
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+
+        .success {
+            color: green;
+            text-align: center;
+        }
+    </style>
+
+    <body>
+
+    <div class="container">
+        <h2>Kapcsolatfelvétel</h2>
+
+        <form id="contactForm">
+            <label for="name">Név:</label>
+            <input type="text" id="name">
+
+            <label for="email">E-mail:</label>
+            <input type="text" id="email">
+
+            <label for="message">Üzenet:</label>
+            <textarea id="message" rows="4"></textarea>
+
+            <div id="error" class="error"></div>
+
+            <input type="submit" value="Küldés">
+        </form>
+
+        <div id="success" class="success"></div>
+    </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+            let errorDiv = document.getElementById("error");
+            let successDiv = document.getElementById("success");
+
+            errorDiv.textContent = "";
+            successDiv.textContent = "";
+
+            if (name === "" || email === "" || message === "") {
+                errorDiv.textContent = "Minden mező kitöltése kötelező!";
+                return;
+            }
+
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                errorDiv.textContent = "Érvénytelen e-mail cím!";
+                return;
+            }
+
+            successDiv.textContent = "Az üzenet sikeresen elküldve!";
+            document.getElementById("contactForm").reset();
+        });
+    </script>
+</body></html>
