@@ -1,4 +1,4 @@
-function turizmus(melyik){
+function nyaron(melyik){
     document.getElementById('turizmusszovegkeret').style.display='none';
     document.getElementById('turizmuskep').src='kepek'+melyik+'.jpg';
     document.getElementById('turizmuskepkeret').style.display='block';   
