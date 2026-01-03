@@ -69,7 +69,7 @@ tbody{
     margin-top: 20px;
 }
 
-.{
+.madarkep{
     width: 100px;
     vertical-align: bottom;
     /*cursor: pointer;*/
@@ -85,12 +85,12 @@ small {
     border-radius: 45px 0px;
 }
 
-.{
+.novenykep{
     font-style: italic;
     text-align:center;
 }
 
-.img{
+.novenykep img{
     width: 100%;
     max-width: 500px;
     padding: 20px;
@@ -103,7 +103,7 @@ small {
     cursor: pointer;
 }
 
-#{
+#turizmuskep{
     width: 80%;
     height: 80%;
     margin: 0px auto;  
