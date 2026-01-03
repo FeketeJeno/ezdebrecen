@@ -1,5 +1,6 @@
 body{
     margin: 0px 20px;
+    background-color: lightyellow;
 }
 
 h1{
@@ -87,10 +88,7 @@ small {
     border-radius: 45px 0px;
 }
 
-.novenykep{
-    font-style: italic;
-    text-align:center;
-}
+
 
 .mkep img{
     width: 100%;
